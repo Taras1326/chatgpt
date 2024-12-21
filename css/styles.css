@@ -1,0 +1,177 @@
+/* Основні стилі */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Стилі для навігації */
+  .navbar {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navbar li {
+    margin: 0 20px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .navbar a:hover {
+    color: #ff6347;
+  }
+  
+  /* Головний банер */
+  .hero {
+    background: url('hero-image.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  
+  .cta-btn {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-btn:hover {
+    background-color: #ff4500;
+  }
+  
+  /* Секції */
+  .section-about, .services-section, .projects-section, .contact-section {
+    padding: 80px 20px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Секція послуг */
+  .service-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .service-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Проекти */
+  .project-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .project-item {
+    margin: 20px;
+    width: 300px;
+  }
+  
+  .project-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+  
+  .project-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Контактна форма */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form input, form textarea {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #ff6347;
+  }
+  
+  /* Мобільний дизайн */
+  @media (max-width: 768px) {
+    .navbar ul {
+      flex-direction: column;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  
+    .cta-btn {
+      font-size: 1rem;
+    }
+  }
+  
